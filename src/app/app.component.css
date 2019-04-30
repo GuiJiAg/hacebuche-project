@@ -1,22 +1,20 @@
 .bloc-logo {
-    position: relative;
+    position: absolute;
+    margin-left: 3px;
     width: 130px;
-    height: 49px;
+    height: 45px;
     float: left;
-}
-
-.bloc-logo canvas, .bloc-logo .logo-mask {
-    display: block;
-    width: 130px;
-    height: 49px;
 }
 
 .bloc-logo .logo-mask {
     position: absolute;
     top: 0;
     left: 0;
+    display: block;
+    width: 130px;
+    height: 45px;
     background-size: 130px;
-    background-image: url("../assets/logo-mask.png");
+    background-image: url("../assets/hacebuche-logo.jpg");
     text-indent: -9999px;
 }
 
@@ -27,4 +25,48 @@
 
 .w3-bar-item {
     font-size: 15px;
+}
+
+div .w3-right, nav, header p {
+    font-family: "Courgette", cursive;
+}
+
+header p {
+    font-size: 30px;
+}
+
+.close-nav {
+    border-bottom-style: solid;
+    border-bottom-color:darkgrey;
+}
+
+nav span {
+    color: red;
+    font-family: 'Arvo', serif;
+}
+
+.responsive-nav-hidden {
+    display: none;
+}
+
+.responsive-nav-enabled {
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    header p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header p {
+        display: none;
+    }
 }

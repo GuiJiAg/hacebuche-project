@@ -2,7 +2,6 @@
 <div class="w3-top">
   <div class="grey w3-bar w3-padding w3-card">
     <div class="bloc-logo">
-      <canvas id="logo-canvas"></canvas>
       <a href="#home" class="logo-mask">Home</a>
     </div>
     <!-- Right-sided navbar links. Hide them on small screens -->
@@ -13,66 +12,49 @@
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="nav_open()">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" (click)="nav_open()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 </div>
 
   <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block grey w3-card w3-animate-left" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="nav_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar <span style="color: red">X</span></a>
-  <a href="#about" onclick="nav_close()" class="w3-bar-item w3-button">Nuestra Carta</a>
-  <a href="#menu" onclick="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
-  <a href="#contact" onclick="nav_close()" class="w3-bar-item w3-button">Reserva</a>
+<nav #responsiveNav class="w3-sidebar w3-bar-block grey w3-card w3-animate-left responsive-nav-hidden">
+  <div class="close-nav">
+    <a href="javascript:void(0)" (click)="nav_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar <span>X</span></a>
+  </div> 
+  <a href="#about" (click)="nav_close()" class="w3-bar-item w3-button">Nuestra Carta</a>
+  <a href="#menu" (click)="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
+  <a href="#contact" (click)="nav_close()" class="w3-bar-item w3-button">Reserva</a>
 </nav>
-
-<script>
-  // Toggle between showing and hiding the sidebar when clicking the menu icon
-  var mySidebar = document.getElementById("mySidebar");
-
-  function nav_open() {
-    if (mySidebar.style.display === 'block') {
-      mySidebar.style.display = 'none';
-    } else {
-      mySidebar.style.display = 'block';
-    }
-  }
-
-  // Close the sidebar with the close button
-  function nav_close() {
-      mySidebar.style.display = "none";
-  }
-</script>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:350px" id="home">
   <img class="w3-image" src="./assets/el-hacebuche.jpg" alt="Hamburger Catering" width="100%" height="500">
+  <div class="w3-display-bottomleft w3-container"><p><strong>El Hacebuche</strong></p></div>
 </header>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1200px">
-
   <!-- About Section -->
   <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="./assets/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Catering</h1><br>
+    <div class="w3-col m2 w3-padding-large"></div>
+    <div class="w3-col m8 w3-padding-large">
+      <h1 class="w3-center">Mesón Hacebuche</h1>
+      <br />
       <h5 class="w3-center">Tradition since 1889</h5>
-      <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
+      <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.</p>
       <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
   
-  <hr>
+  <hr />
   
   <!-- Menu Section -->
   <div class="w3-row w3-padding-64" id="menu">
     <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Our Menu</h1><br>
+      <h1 class="w3-center">Our Menu</h1>
+      <br />
       <h4>Bread Basket</h4>
       <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
     
