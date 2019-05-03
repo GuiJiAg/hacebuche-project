@@ -48,3 +48,11 @@ nav span {
 .responsive-nav-enabled {
     display: block;
 }
+
+.w3-hover-opacity {
+    cursor: pointer;
+}
+
+i {
+    margin: 5px;
+}
