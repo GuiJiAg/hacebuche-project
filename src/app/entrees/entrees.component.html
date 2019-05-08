@@ -1,0 +1,21 @@
+<div class="w3-row w3-padding-64" id="menu">
+  <div class="w3-col l6 w3-padding-large">
+    <h2 class="w3-center">Entrantes</h2>
+    <br />
+    <div *ngFor="let entree of entrees">
+      <h4>
+        {{entree.name}}
+        <br />
+        <strong>{{entree.price}}</strong><i class="fa fa-euro"></i>
+      </h4>
+      <p class="w3-text-grey">
+        {{entree.description}}
+      </p> 
+      <br />
+    </div>  
+  </div>
+  
+  <div class="w3-col l6 w3-padding-large">
+    <img src="../../assets/entrees.jpg" class="w3-round w3-image" alt="Menu" style="width:100%">
+  </div>
+</div>
