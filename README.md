@@ -1,27 +1,45 @@
-# HacebucheProject
+# Hacebuche Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+A continuación se explicarán los pasos a seguir para poder instalar y desplegar este proyecto en una máquina local
 
-## Development server
+## Instalación
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para poder descargar o clonar este proyecto se puede hacer mediante descarga en ZIP con el botón habilitado en el repositorio o bien instalando [Git](https://git-scm.com/downloads).
 
-## Code scaffolding
+Suponiendo que hemos instalado Git deberemos abrir nuestra consola y trasladarnos al lugar de trabajo donde deseemos clonar el proyecto con el siguiente comando:
+`cd YourWorkSpace`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Luego clonaremos el proyecto con el siguiente comando:
+`git clone https://github.com/GuiJiAg/hacebuche-project`
 
-## Build
+Para finalizar nos trasladaremos a la raiz del proyecto:
+`cd hacebuche-project`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Node.js y NPM
 
-## Running unit tests
+Para que la aplicación funcione necesitaremos tener instalado [Node.js](https://nodejs.org/es/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Cuando Node.js se termine de instalar se descargará con el su gestor de paquetes (NPM). Se puede comprobar si ambos se han instalado correctamente con los siguientes comandos (mostrando sus respectivas versiones en caso de que se hayan instalado correctamente):
+`node -v`
+`npm -v`
 
-## Running end-to-end tests
+El proyecto posee un archivo JSON llamado `package.json` en el que se incluye todas las dependencias de Node.js que necesita la aplicación para que funcione correctamente. Dado que en los repositorios no se suben estos módulos de Node.js se deberán instalar después de haber clonado el proyecto. Estando situados en la raíz del proyecto deberemos introducir el siguiente comando:
+`npm install`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Este comando leerá el archivo `package.json` e instalará las dependencias recogidas en ella en un directorio llamado `node_modules`
 
-## Further help
+## Angular CLI
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Una vez que la descarga del proyecto esté concluida necesitaremos instalar [Angular CLI](https://angular.io/cli) para poder desplegar nuestra aplicación en un servidor local. Para ello ejecutaremos el siguiente comando:
+`npm install -g @angular/cli`
+
+El flag `-g` indica que el cli se instalará de forma global en el equipo, por lo que no es necesario estar en una ruta específica
+
+Una vez terminada la instalación deberemos volver a la ruta de nuestro proyecto mediante comandos si nos hemos desplazado de ahí y ejecutar el siguiente comando:
+`ng serve --open`
+
+Este comando desplegará la aplicación en `http://localhost:4200/`. La aplicación se recargará automáticamente si se produce cualquier cambio en los archivos del proyecto
+
+## Hacebuche API
+
+La aplicación recoge datos directamente de la API desarrollada para ella. Como la API aún no está en producción se necesitará instalarla. Para ello se debe leer los pasos indicados en el README del repositorio de [Hacebuche-API](https://github.com/GuiJiAg/hacebuche-api)
