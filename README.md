@@ -26,7 +26,7 @@ Cuando Node.js se termine de instalar se descargará con él su gestor de paquet
 El proyecto posee un archivo JSON llamado `package.json` en el que se incluye todas las dependencias de Node.js que necesita la aplicación para que funcione correctamente. Dado que en los repositorios no se suben estos módulos de Node.js se deberán instalar después de haber clonado el proyecto. Estando situados en la raíz del proyecto deberemos introducir el siguiente comando:
 `npm install`
 
-Este comando leerá el archivo `package.json` e instalará las dependencias recogidas en ella en un directorio llamado `node_modules`
+Este comando leerá el archivo `package.json` para reconocer las dependencias que vienen recogidas en él y las instalará en un directorio llamado `node_modules`
 
 ## Angular CLI
 
