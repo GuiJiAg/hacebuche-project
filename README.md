@@ -19,7 +19,7 @@ Para finalizar nos trasladaremos a la raiz del proyecto:
 
 Para que la aplicación funcione necesitaremos tener instalado [Node.js](https://nodejs.org/es/)
 
-Cuando Node.js se termine de instalar se descargará con el su gestor de paquetes (NPM). Se puede comprobar si ambos se han instalado correctamente con los siguientes comandos (mostrando sus respectivas versiones en caso de que se hayan instalado correctamente):
+Cuando Node.js se termine de instalar se descargará con él su gestor de paquetes (NPM). Se puede comprobar si ambos se han instalado correctamente con los siguientes comandos (mostrando sus respectivas versiones en caso de que se hayan instalado correctamente):
 `node -v`
 `npm -v`
 
