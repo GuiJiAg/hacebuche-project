@@ -1,0 +1,21 @@
+<div class="w3-row w3-padding-64">
+  <div class="w3-col l6 w3-padding-large">
+    <h2 class="w3-center">Ensaladas</h2>
+    <br />
+    <div *ngFor="let salad of salads">
+      <h4>
+        {{salad.name}}
+        <br />
+        <strong>{{salad.price}}</strong><i class="fa fa-euro"></i>
+      </h4>
+      <p class="w3-text-grey">
+        {{salad.description}}
+      </p> 
+      <br />
+    </div>  
+  </div>
+  
+  <div class="w3-col l6 w3-padding-large">
+    <img src="../../assets/salads.jpeg" class="w3-round w3-image" alt="Ensaladas">
+  </div>
+</div>

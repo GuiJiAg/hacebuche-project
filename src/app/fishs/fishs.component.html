@@ -1,0 +1,21 @@
+<div class="w3-row w3-padding-64">
+  <div class="w3-col l6 w3-padding-large">
+    <h2 class="w3-center">Pescados y Mariscos</h2>
+    <br />
+    <div *ngFor="let fish of fishs">
+      <h4>
+        {{fish.name}}
+        <br />
+        <strong>{{fish.price}}</strong><i class="fa fa-euro"></i>
+      </h4>
+      <p class="w3-text-grey">
+        {{fish.description}}
+      </p> 
+      <br />
+    </div>  
+  </div>
+  
+  <div class="w3-col l6 w3-padding-large">
+    <img src="../../assets/fishs.jpg" class="w3-round w3-image" alt="Pescados">
+  </div>
+</div>

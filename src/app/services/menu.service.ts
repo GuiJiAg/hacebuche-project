@@ -13,10 +13,53 @@ export class MenuService {
 
   constructor(private http: HttpClient) { }
 
+  /*   GETs   */
   getEntrees(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiMenuUrl}/entrees`)
       .pipe(
         catchError(this.handleError<Product[]>('getEntrees', []))
+    );
+  }
+
+  getToasts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiMenuUrl}/toasts`)
+      .pipe(
+        catchError(this.handleError<Product[]>('getToasts', []))
+    );
+  }
+
+  getSalads(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiMenuUrl}/salads`)
+      .pipe(
+        catchError(this.handleError<Product[]>('getSalads', []))
+    );
+  }
+
+  getPastas(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiMenuUrl}/pastas`)
+      .pipe(
+        catchError(this.handleError<Product[]>('getPastas', []))
+    );
+  }
+
+  getScrambleds(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiMenuUrl}/scrambleds`)
+      .pipe(
+        catchError(this.handleError<Product[]>('getScrambleds', []))
+    );
+  }
+
+  getFishs(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiMenuUrl}/fishs`)
+      .pipe(
+        catchError(this.handleError<Product[]>('getFishs', []))
+    );
+  }
+
+  getMeats(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiMenuUrl}/meats`)
+      .pipe(
+        catchError(this.handleError<Product[]>('getMeats', []))
     );
   }
 

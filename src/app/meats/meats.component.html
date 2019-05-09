@@ -1,0 +1,30 @@
+<div class="w3-row w3-padding-64">
+  <div class="w3-col l6 w3-padding-large">
+    <h2 class="w3-center">Carnes</h2>
+    <br />
+    <div *ngFor="let meat of meats">
+      <ng-template [ngIf]="meat._id != '5cd439e5e8ea5935b0e33659'" [ngIfElse]="noPrice">
+        <h4>
+          {{meat.name}}
+          <br />
+          <strong>{{meat.price}}</strong><i class="fa fa-euro"></i>
+        </h4>
+      </ng-template>
+      <ng-template #noPrice>
+        <h4>
+          {{meat.name}}
+          <br />
+          <strong>Precio según peso</strong>
+        </h4>
+      </ng-template>
+      <p class="w3-text-grey">
+        {{meat.description}}
+      </p> 
+      <br />
+    </div>  
+  </div>
+  
+  <div class="w3-col l6 w3-padding-large">
+    <img src="../../assets/meats.jpg" class="w3-round w3-image" alt="Carnes">
+  </div>
+</div>
