@@ -1,0 +1,31 @@
+<h2 class="w3-center">Vinos Blancos de Rueda</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l6 w3-padding-large">
+    <div *ngFor="let ruedaWine of ruedaWines">
+      <u><h4>{{ruedaWine.name}}</h4></u>
+      <p class="w3-text-grey">
+        {{ruedaWine.information}}
+      </p>
+      <ng-template [ngIf]="ruedaWine.cupPrice > 0">
+        <p>
+          Precio Copa: <strong>{{ruedaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+        </p>
+      </ng-template>
+      <ng-template [ngIf]="ruedaWine.bottlePrice > 0">
+        <p>
+          Precio Botella: <strong>{{ruedaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/RuedaWines.jpg" class="w3-round w3-image" alt="Albariños">
+
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,12 @@
+header {
+    max-width: 100%;
+    min-width: 330px;
+}
+
+header img {
+    height: 500;
+}
+
+h1 {
+    font-family: 'Courgette', cursive;
+}

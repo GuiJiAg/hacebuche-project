@@ -7,7 +7,7 @@
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-medium w3-hide-small">
       <a routerLink="/menu" class="w3-bar-item w3-button">Nuestra Carta</a>
-      <a href="#menu" class="w3-bar-item w3-button">Nuestros Vinos</a>
+      <a routerLink="/wines" class="w3-bar-item w3-button">Nuestros Vinos</a>
       <a href="#contact" class="w3-bar-item w3-button">Reserva</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -28,7 +28,7 @@
     </a>
   </div> 
   <a routerLink="/menu" (click)="nav_close()" class="w3-bar-item w3-button">Nuestra Carta</a>
-  <a href="#menu" (click)="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
+  <a routerLink="/wines" (click)="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
   <a href="#contact" (click)="nav_close()" class="w3-bar-item w3-button">Reserva</a>
 </nav>
 

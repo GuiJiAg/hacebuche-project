@@ -1,0 +1,33 @@
+<h2 class="w3-center">Vinos de Ribera del Duero</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l6 w3-padding-large">
+    <h3>Tintos</h3>
+    <br />
+    <div *ngFor="let riberaWine of riberaWines">
+      <ng-template [ngIf]="riberaWine.type == 'Tinto'">
+        <u><h4>{{riberaWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{riberaWine.information}}
+        </p>
+        <ng-template [ngIf]="riberaWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{riberaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <p>
+          Precio Botella: <strong>{{riberaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/RiberaWines.jpg" class="w3-round w3-image" alt="Vinos de Ribera del Duero">
+
+<br />
+<br />
+<br />
+<br />

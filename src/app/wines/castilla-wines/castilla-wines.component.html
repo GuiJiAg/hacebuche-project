@@ -1,0 +1,58 @@
+<h2 class="w3-center">Vinos de Castilla-La Mancha</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l6 w3-padding-large">
+    <h3>Tintos</h3>
+    <br />
+    <div *ngFor="let castillaWine of castillaWines">
+      <ng-template [ngIf]="castillaWine.type == 'Tinto'">
+        <u><h4>{{castillaWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{castillaWine.information}}
+        </p>
+        <ng-template [ngIf]="castillaWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{castillaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <ng-template [ngIf]="castillaWine.bottlePrice > 0">
+          <p>
+            Precio Botella: <strong>{{castillaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+          </p> 
+        </ng-template>
+      </ng-template>
+    </div>  
+  </div>
+
+  <div class="w3-col l6 w3-padding-large">
+    <h3>Blancos</h3>
+    <br />
+    <div *ngFor="let castillaWine of castillaWines">
+      <ng-template [ngIf]="castillaWine.type == 'Blanco'">
+        <u><h4>{{castillaWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{castillaWine.information}}
+        </p>
+        <ng-template [ngIf]="castillaWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{castillaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <ng-template [ngIf]="castillaWine.bottlePrice > 0">
+          <p>
+            Precio Botella: <strong>{{castillaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+          </p> 
+        </ng-template>
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/CastillaWines.jpg" class="w3-round w3-image" alt="Vinos de Castilla-La Mancha">
+
+<br />
+<br />
+<br />
+<br />

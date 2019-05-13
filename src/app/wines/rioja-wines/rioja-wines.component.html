@@ -1,0 +1,54 @@
+<h2 class="w3-center">Vinos de Rioja</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l6 w3-padding-large">
+    <h3>Tintos</h3>
+    <br />
+    <div *ngFor="let riojaWine of riojaWines">
+      <ng-template [ngIf]="riojaWine.type == 'Tinto'">
+        <u><h4>{{riojaWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{riojaWine.information}}
+        </p>
+        <ng-template [ngIf]="riojaWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{riojaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <p>
+          Precio Botella: <strong>{{riojaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+  <div class="w3-col l6 w3-padding-large">
+    <h3>Blancos</h3>
+    <br />
+    <div *ngFor="let riojaWine of riojaWines">
+      <ng-template [ngIf]="riojaWine.type == 'Blanco'">
+        <u><h4>{{riojaWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{riojaWine.information}}
+        </p>
+        <ng-template [ngIf]="riojaWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{riojaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <p>
+          Precio Botella: <strong>{{riojaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/RiojaWines.jpg" class="w3-round w3-image" alt="Vinos de Rioja">
+
+<br />
+<br />
+<br />
+<br />

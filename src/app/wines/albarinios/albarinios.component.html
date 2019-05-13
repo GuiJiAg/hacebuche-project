@@ -1,0 +1,31 @@
+<h2 class="w3-center">Albariños</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l6 w3-padding-large">
+    <div *ngFor="let albarinio of albarinios">
+      <u><h4>{{albarinio.name}}</h4></u>
+      <p class="w3-text-grey">
+        {{albarinio.information}}
+      </p>
+      <ng-template [ngIf]="albarinio.cupPrice > 0">
+        <p>
+          Precio Copa: <strong>{{albarinio.cupPrice}} </strong><i class="fa fa-euro"></i>
+        </p>
+      </ng-template>
+      <ng-template [ngIf]="albarinio.bottlePrice > 0">
+        <p>
+          Precio Botella: <strong>{{albarinio.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/Albariños.jpg" class="w3-round w3-image" alt="Albariños">
+
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,26 @@
+<h2 class="w3-center">Olorosos</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l6 w3-padding-large">
+    <div *ngFor="let oloroso of olorosos">
+      <u><h4>{{oloroso.name}}</h4></u>
+      <p class="w3-text-grey">
+        {{oloroso.information}}
+      </p>
+      <ng-template [ngIf]="oloroso.cupPrice > 0">
+        <p>
+          Precio Copa: <strong>{{oloroso.cupPrice}} </strong><i class="fa fa-euro"></i>
+        </p>
+      </ng-template>
+      <ng-template [ngIf]="oloroso.bottlePrice > 0">
+        <p>
+          Precio Botella: <strong>{{oloroso.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/olorosos.jpg" class="w3-round w3-image" alt="Olorosos">

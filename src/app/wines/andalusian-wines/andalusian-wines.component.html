@@ -1,0 +1,75 @@
+<h2 class="w3-center">Vinos de Andalucía</h2>
+
+<div class="w3-row w3-padding-64">
+
+  <div class="w3-col l4 w3-padding-large">
+    <h3>Tintos</h3>
+    <br />
+    <div *ngFor="let andalusianWine of andalusianWines">
+      <ng-template [ngIf]="andalusianWine.type == 'Tinto'">
+        <u><h4>{{andalusianWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{andalusianWine.information}}
+        </p>
+        <ng-template [ngIf]="andalusianWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{andalusianWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <p>
+          Precio Botella: <strong>{{andalusianWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+  <div class="w3-col l4 w3-padding-large">
+    <h3>Blancos</h3>
+    <br />
+    <div *ngFor="let andalusianWine of andalusianWines">
+      <ng-template [ngIf]="andalusianWine.type == 'Blanco'">
+        <u><h4>{{andalusianWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{andalusianWine.information}}
+        </p>
+        <ng-template [ngIf]="andalusianWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{andalusianWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <p>
+          Precio Botella: <strong>{{andalusianWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+  <div class="w3-col l4 w3-padding-large">
+    <h3>Rosados</h3>
+    <br />
+    <div *ngFor="let andalusianWine of andalusianWines">
+      <ng-template [ngIf]="andalusianWine.type == 'Rosado'">
+        <u><h4>{{andalusianWine.name}}</h4></u>
+        <p class="w3-text-grey">
+          {{andalusianWine.information}}
+        </p>
+        <ng-template [ngIf]="andalusianWine.cupPrice > 0">
+          <p>
+            Precio Copa: <strong>{{andalusianWine.cupPrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template>
+        <p>
+          Precio Botella: <strong>{{andalusianWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+        </p> 
+      </ng-template>
+    </div>  
+  </div>
+
+</div>
+
+<img src="../../../assets/andalusianWine.jpg" class="w3-round w3-image" alt="Vinos de Andalucía">
+
+<br />
+<br />
+<br />
+<br />

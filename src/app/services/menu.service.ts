@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../product';
+import { Food } from '../models/food';
 import { Observable, of } from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
@@ -14,52 +14,59 @@ export class MenuService {
   constructor(private http: HttpClient) { }
 
   /*   GETs   */
-  getEntrees(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/entrees`)
+  getEntrees(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/entrees`)
       .pipe(
-        catchError(this.handleError<Product[]>('getEntrees', []))
+        catchError(this.handleError<Food[]>('getEntrees', []))
     );
   }
 
-  getToasts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/toasts`)
+  getToasts(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/toasts`)
       .pipe(
-        catchError(this.handleError<Product[]>('getToasts', []))
+        catchError(this.handleError<Food[]>('getToasts', []))
     );
   }
 
-  getSalads(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/salads`)
+  getSalads(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/salads`)
       .pipe(
-        catchError(this.handleError<Product[]>('getSalads', []))
+        catchError(this.handleError<Food[]>('getSalads', []))
     );
   }
 
-  getPastas(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/pastas`)
+  getPastas(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/pastas`)
       .pipe(
-        catchError(this.handleError<Product[]>('getPastas', []))
+        catchError(this.handleError<Food[]>('getPastas', []))
     );
   }
 
-  getScrambleds(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/scrambleds`)
+  getScrambleds(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/scrambleds`)
       .pipe(
-        catchError(this.handleError<Product[]>('getScrambleds', []))
+        catchError(this.handleError<Food[]>('getScrambleds', []))
     );
   }
 
-  getFishs(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/fishs`)
+  getFishs(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/fishs`)
       .pipe(
-        catchError(this.handleError<Product[]>('getFishs', []))
+        catchError(this.handleError<Food[]>('getFishs', []))
     );
   }
 
-  getMeats(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.apiMenuUrl}/meats`)
+  getMeats(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/meats`)
       .pipe(
-        catchError(this.handleError<Product[]>('getMeats', []))
+        catchError(this.handleError<Food[]>('getMeats', []))
+    );
+  }
+
+  getDesserts(): Observable<Food[]> {
+    return this.http.get<Food[]>(`${this.apiMenuUrl}/desserts`)
+      .pipe(
+        catchError(this.handleError<Food[]>('getDesserts', []))
     );
   }
 
