@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Mail } from '../models/mail';
 
 @Component({
   selector: 'app-reserve',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reserve.component.css']
 })
 export class ReserveComponent implements OnInit {
+  @Input() mail: Mail;
 
   currentDate: any = new Date();
 
@@ -16,7 +18,7 @@ export class ReserveComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.checkDate()
+    this.checkDate();
   }
 
   checkDate() {
@@ -28,5 +30,12 @@ export class ReserveComponent implements OnInit {
     }
 
     this.currentDate = `${this.year}-${this.month}-${this.day}`;
+  }
+
+  myAlert(name, email, phone, reserveDate, reserveHour, 
+    numberDinners, terraza, local, observations) {
+    alert(
+      name+' || '+email+' || '+phone+' || '+reserveDate+' || '+reserveHour+' || '+ 
+      numberDinners+' || '+terraza+' || '+local+' || '+observations);
   }
 }

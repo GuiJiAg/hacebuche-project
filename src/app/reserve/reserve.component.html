@@ -17,23 +17,23 @@
       <p>
         <label>Nombre</label>
       </p>
-      <input class="w3-input border w3-round-large w3-animate-input" type="text" />   
+      <input #name class="w3-input border w3-round-large w3-animate-input" type="text" />   
       <p>  
         <label>Correo electrónico</label>
       </p>
-      <input class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #email class="w3-input border w3-round-large w3-animate-input" type="text" />
       <p>  
         <label>Teléfono</label>
       </p>
-      <input class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #phone class="w3-input border w3-round-large w3-animate-input" type="text" />
       <p>  
         <label>¿Para qué día?</label>
       </p>
-      <input class="w3-input border w3-round-large" type="date" min={{currentDate}} />
+      <input #reserveDate class="w3-input border w3-round-large" type="date" min={{currentDate}} />
       <p>  
         <label>¿A qué hora?</label>
       </p>
-      <select class="border">
+      <select #reserveHour class="border">
         <option>13:30</option>
         <option>14:00</option>
         <option>14:30</option>
@@ -46,26 +46,39 @@
       <p>  
         <label>¿Cuántas personas?</label>
       </p>
-      <input class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #numberDinners class="w3-input border w3-round-large w3-animate-input" type="text" />
       <p>  
         <label>¿Dónde prefieres?</label>
       </p>
       <div>
-        <input class="w3-radio" type="radio" name="preferedPlace" value="Terraza" checked="checked" /><label>Terraza</label>
+        <input #terraza class="w3-radio" type="radio" name="preferedPlace" value="Terraza" checked="checked" /><label>Terraza</label>
         <br />
-        <input class="w3-radio" type="radio" name="preferedPlace" value="Local" /><label>Local</label>
+        <input #local class="w3-radio" type="radio" name="preferedPlace" value="Local" /><label>Local</label>
       </div>
       <p>  
         <label>¿Alguna observación a tener en cuenta?</label>
         <br />
         <label>(Una hora más específica, alergias, productos para celíacos,...)</label>
       </p>
-      <textarea class="border" name="observations"></textarea> 
+      <textarea #observations class="border" name="observations"></textarea> 
       <hr />
     </form>
 
     <div class="button-container w3-container">
-      <button class="w3-button w3-xlarge w3-round-large">Enviar</button>
+      <button 
+        (click)="myAlert(
+          name.value, 
+          email.value, 
+          phone.value, 
+          reserveDate.value, 
+          reserveHour.value, 
+          numberDinners.value, 
+          terraza.checked, 
+          local.checked, 
+          observations.value)" 
+        class="w3-button w3-xlarge w3-round-large">
+        Enviar
+      </button>
     </div>
 
   </div>
