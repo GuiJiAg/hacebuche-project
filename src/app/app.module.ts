@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
@@ -23,6 +24,7 @@ import { CastillaWinesComponent } from './wines/castilla-wines/castilla-wines.co
 import { AlbariniosComponent } from './wines/albarinios/albarinios.component';
 import { RuedaWinesComponent } from './wines/rueda-wines/rueda-wines.component';
 import { OlorososComponent } from './wines/olorosos/olorosos.component';
+import { ReserveComponent } from './reserve/reserve.component';
 
 @NgModule({
   declarations: [
@@ -44,10 +46,12 @@ import { OlorososComponent } from './wines/olorosos/olorosos.component';
     CastillaWinesComponent,
     AlbariniosComponent,
     RuedaWinesComponent,
-    OlorososComponent
+    OlorososComponent,
+    ReserveComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     CommonModule

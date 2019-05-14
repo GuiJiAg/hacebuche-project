@@ -8,7 +8,7 @@
     <div class="w3-right w3-hide-medium w3-hide-small">
       <a routerLink="/menu" class="w3-bar-item w3-button">Nuestra Carta</a>
       <a routerLink="/wines" class="w3-bar-item w3-button">Nuestros Vinos</a>
-      <a href="#contact" class="w3-bar-item w3-button">Reserva</a>
+      <a routerLink="/reserve" class="w3-bar-item w3-button">Reserva</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -29,7 +29,7 @@
   </div> 
   <a routerLink="/menu" (click)="nav_close()" class="w3-bar-item w3-button">Nuestra Carta</a>
   <a routerLink="/wines" (click)="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
-  <a href="#contact" (click)="nav_close()" class="w3-bar-item w3-button">Reserva</a>
+  <a routerLink="/reserve" (click)="nav_close()" class="w3-bar-item w3-button">Reserva</a>
 </nav>
 
 <!-- Page content -->
