@@ -180,11 +180,11 @@ export class ReserveComponent implements OnInit {
   }
 
   cleanPhone() {
-    this.renderer.setProperty(this.phoneInput, 'value', '');
+    this.renderer.setProperty(this.phoneInput.nativeElement, 'value', '');
   }
 
   cleanReserveDate() {
-    this.renderer.setProperty(this.reserveDateInput, 'value', '');
+    this.renderer.setProperty(this.reserveDateInput.nativeElement, 'value', '');
   }
 
   cleanNumberDiners() {
