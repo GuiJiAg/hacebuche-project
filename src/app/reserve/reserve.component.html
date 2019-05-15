@@ -18,18 +18,22 @@
         <label>Nombre</label>
       </p>
       <input #name (click)="cleanName()" class="w3-input border w3-round-large w3-animate-input" type="text" />   
+      <br />
       <p>  
         <label>Correo electrónico</label>
       </p>
       <input #email (click)="cleanEmail()" class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <br />
       <p>  
         <label>Teléfono</label>
       </p>
       <input #phone (click)="cleanPhone()" class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <br />
       <p>  
         <label>¿Para qué día?</label>
       </p>
       <input #reserveDate (click)="cleanReserveDate()" class="w3-input border w3-round-large" type="date" min={{dateForm}} />
+      <br />
       <p>  
         <label>¿A qué hora?</label>
       </p>
@@ -43,10 +47,12 @@
         <option>22:30</option>
         <option>23:00</option>
       </select>
+      <br />
       <p>  
         <label>¿Cuántas personas?</label>
       </p>
       <input #numberDiners (click)="cleanNumberDiners()" class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <br />
       <p>  
         <label>¿Dónde prefieres?</label>
       </p>
@@ -57,6 +63,7 @@
         <input #local class="w3-radio" type="radio" name="preferedPlace" value="Local" />
         <label class="radioLabel">Local</label>
       </div>
+      <br />
       <p>  
         <label>¿Alguna observación a tener en cuenta?</label>
         <br />
