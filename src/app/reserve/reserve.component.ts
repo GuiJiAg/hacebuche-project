@@ -147,7 +147,7 @@ export class ReserveComponent implements OnInit {
     this.day = this.dateForm.getDate();
 
     this.checkDate();
-    this.dateForm = `${this.day}${this.month}${this.year}`;
+    this.dateForm = `${this.day}/${this.month}/${this.year}`;
     this.mail.reserveDate = this.dateForm;
     this.mailService.sendMail(this.mail).subscribe();
     this.renderer.setStyle(this.modalCorrect.nativeElement, 'display', 'block');
