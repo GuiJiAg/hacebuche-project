@@ -48,6 +48,10 @@ select {
     white-space: nowrap;
 }
 
+.radioLabel {
+    margin-left: 5px;
+}
+
 input:focus, select:focus, textarea:focus {
     border-color: #449fa3;
 }

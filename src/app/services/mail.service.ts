@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Mail } from '../models/mail';
+import { Reserve } from '../models/mail';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
@@ -17,9 +17,9 @@ export class MailService {
 
   constructor(private http: HttpClient) { }
 
-  sendMail(mail: Mail): Observable<Mail> {
-    return this.http.post<Mail>(this.apiMailUrl, mail, httpOptions).pipe(
-      catchError(this.handleError<Mail>('sendMail'))
+  sendMail(mail: Reserve): Observable<Reserve> {
+    return this.http.post<Reserve>(this.apiMailUrl, mail).pipe(
+      catchError(this.handleError<Reserve>('sendMail'))
     );
   }
 
