@@ -2,13 +2,13 @@
 <div class="w3-top">
   <div class="grey w3-bar w3-padding w3-card">
     <div class="bloc-logo">
-      <a routerLink="/home" class="logo-mask">Home</a>
+      <a (click)="goTop()" routerLink="/home" class="logo-mask">Home</a>
     </div>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-medium w3-hide-small">
-      <a routerLink="/menu" class="w3-bar-item w3-button">Nuestra Carta</a>
-      <a routerLink="/wines" class="w3-bar-item w3-button">Nuestros Vinos</a>
-      <a routerLink="/reserve" class="w3-bar-item w3-button">Reserva</a>
+      <a (click)="goTop()" routerLink="/menu" class="w3-bar-item w3-button">Nuestra Carta</a>
+      <a (click)="goTop()" routerLink="/wines" class="w3-bar-item w3-button">Nuestros Vinos</a>
+      <a (click)="goTop()" routerLink="/reserve" class="w3-bar-item w3-button">Reserva</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -27,9 +27,9 @@
       Cerrar <span>X</span>
     </a>
   </div> 
-  <a routerLink="/menu" (click)="nav_close()" class="w3-bar-item w3-button">Nuestra Carta</a>
-  <a routerLink="/wines" (click)="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
-  <a routerLink="/reserve" (click)="nav_close()" class="w3-bar-item w3-button">Reserva</a>
+  <a (click)="goTop()" routerLink="/menu" (click)="nav_close()" class="w3-bar-item w3-button">Nuestra Carta</a>
+  <a (click)="goTop()" routerLink="/wines" (click)="nav_close()" class="w3-bar-item w3-button">Nuestros Vinos</a>
+  <a (click)="goTop()" routerLink="/reserve" (click)="nav_close()" class="w3-bar-item w3-button">Reserva</a>
 </nav>
 
 <!-- Page content -->

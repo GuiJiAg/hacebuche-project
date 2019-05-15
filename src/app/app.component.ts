@@ -39,4 +39,7 @@ export class AppComponent {
     this.renderer.addClass(this.responsive_nav.nativeElement, 'responsive-nav-hidden');
   }
   
+  goTop() {
+    window.scrollTo(0, 0);
+  }
 }

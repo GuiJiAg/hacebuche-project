@@ -47,6 +47,7 @@ export class ReserveComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.checkDate();
     this.dateForm = `${this.year}-${this.month}-${this.day}`;
   }
@@ -91,7 +92,7 @@ export class ReserveComponent implements OnInit {
       this.nameError = nameErrorMessage;
     }
 
-    pattern = /^\w+@\w+\.[a-z]+$/;
+    pattern = /^.+@.+\.[a-z]+$/;
 
     if (!pattern.test(this.mail.email)) {
       validated = false;
