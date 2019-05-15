@@ -17,19 +17,19 @@
       <p>
         <label>Nombre</label>
       </p>
-      <input #name class="w3-input border w3-round-large w3-animate-input" type="text" />   
+      <input #name (click)="cleanName()" class="w3-input border w3-round-large w3-animate-input" type="text" />   
       <p>  
         <label>Correo electrónico</label>
       </p>
-      <input #email class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #email (click)="cleanEmail()" class="w3-input border w3-round-large w3-animate-input" type="text" />
       <p>  
         <label>Teléfono</label>
       </p>
-      <input #phone class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #phone (click)="cleanPhone()" class="w3-input border w3-round-large w3-animate-input" type="text" />
       <p>  
         <label>¿Para qué día?</label>
       </p>
-      <input #reserveDate class="w3-input border w3-round-large" type="date" min={{dateForm}} />
+      <input #reserveDate (click)="cleanReserveDate()" class="w3-input border w3-round-large" type="date" min={{dateForm}} />
       <p>  
         <label>¿A qué hora?</label>
       </p>
@@ -46,7 +46,7 @@
       <p>  
         <label>¿Cuántas personas?</label>
       </p>
-      <input #numberDiners class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #numberDiners (click)="cleanNumberDiners()" class="w3-input border w3-round-large w3-animate-input" type="text" />
       <p>  
         <label>¿Dónde prefieres?</label>
       </p>
@@ -62,7 +62,7 @@
         <br />
         <label>(Una hora más específica, alergias, productos para celíacos,...)</label>
       </p>
-      <textarea #observations class="border" name="observations"></textarea> 
+      <textarea #observations (click)="cleanObservations()" class="border" name="observations"></textarea> 
       <hr />
     </form>
 

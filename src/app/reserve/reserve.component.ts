@@ -16,6 +16,12 @@ const preferedPlaceErrorMessage = 'Debe eligir una zona preferente';
   styleUrls: ['./reserve.component.css']
 })
 export class ReserveComponent implements OnInit {
+  @ViewChild('name') nameInput: ElementRef;
+  @ViewChild('email') emailInput: ElementRef;
+  @ViewChild('phone') phoneInput: ElementRef;
+  @ViewChild('reserveDate') reserveDateInput: ElementRef;
+  @ViewChild('numberDiners') numberDinersInput: ElementRef;
+  @ViewChild('observations') observationsInput: ElementRef;
   @ViewChild('modalError') modalError: ElementRef;
   @ViewChild('modalCorrect') modalCorrect: ElementRef;
 
@@ -133,6 +139,20 @@ export class ReserveComponent implements OnInit {
     this.sendMail();
   }
 
+  sendMail() {
+    this.dateForm = new Date(this.mail.reserveDate);
+
+    this.year = this.dateForm.getFullYear();
+    this.month = this.dateForm.getMonth() + 1;
+    this.day = this.dateForm.getDate();
+
+    this.checkDate();
+    this.dateForm = `${this.day}${this.month}${this.year}`;
+    this.mail.reserveDate = this.dateForm;
+    this.mailService.sendMail(this.mail).subscribe();
+    this.renderer.setStyle(this.modalCorrect.nativeElement, 'display', 'block');
+  }
+
   closeModalError() {
     this.renderer.setStyle(this.modalError.nativeElement, 'display', 'none');
 
@@ -147,19 +167,40 @@ export class ReserveComponent implements OnInit {
 
   closeModalCorrect() {
     this.renderer.setStyle(this.modalCorrect.nativeElement, 'display', 'none');
+
+    this.cleanInputs();
   }
 
-  sendMail() {
-    this.dateForm = new Date(this.mail.reserveDate);
+  cleanName() {
+    this.renderer.setProperty(this.nameInput.nativeElement, 'value', '');
+  }
 
-    this.year = this.dateForm.getFullYear();
-    this.month = this.dateForm.getMonth() + 1;
-    this.day = this.dateForm.getDate();
+  cleanEmail() {
+    this.renderer.setProperty(this.emailInput.nativeElement, 'value', '');
+  }
 
-    this.checkDate();
-    this.dateForm = `${this.day}/${this.month}/${this.year}`;
-    this.mail.reserveDate = this.dateForm;
-    this.mailService.sendMail(this.mail).subscribe();
-    this.renderer.setStyle(this.modalCorrect.nativeElement, 'display', 'block');
+  cleanPhone() {
+    this.renderer.setProperty(this.phoneInput, 'value', '');
+  }
+
+  cleanReserveDate() {
+    this.renderer.setProperty(this.reserveDateInput, 'value', '');
+  }
+
+  cleanNumberDiners() {
+    this.renderer.setProperty(this.numberDinersInput.nativeElement, 'value', '');
+  }
+
+  cleanObservations() {
+    this.renderer.setProperty(this.observationsInput.nativeElement, 'value', '');
+  }
+
+  cleanInputs() {
+    this.cleanName();
+    this.cleanEmail();
+    this.cleanPhone();
+    this.cleanReserveDate();
+    this.cleanNumberDiners();
+    this.cleanObservations();
   }
 }
