@@ -17,22 +17,22 @@
       <p>
         <label>Nombre</label>
       </p>
-      <input #name (click)="cleanName()" class="w3-input border w3-round-large w3-animate-input" type="text" />   
+      <input #name (change)="keepInputsValues('name', name.value)" class="w3-input border w3-round-large w3-animate-input" type="text" />   
       <br />
       <p>  
         <label>Correo electrónico</label>
       </p>
-      <input #email (click)="cleanEmail()" class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #email (change)="keepInputsValues('email', email.value)" class="w3-input border w3-round-large w3-animate-input" type="text" />
       <br />
       <p>  
         <label>Teléfono</label>
       </p>
-      <input #phone (click)="cleanPhone()" class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #phone (change)="keepInputsValues('phone', phone.value)" class="w3-input border w3-round-large w3-animate-input" type="text" />
       <br />
       <p>  
         <label>¿Para qué día?</label>
       </p>
-      <input #reserveDate (click)="cleanReserveDate()" class="w3-input border w3-round-large" type="date" min={{dateForm}} />
+      <input #reserveDate (change)="keepInputsValues('reserveDate', reserveDate.value)" class="w3-input border w3-round-large" type="date" min={{dateForm}} />
       <br />
       <p>  
         <label>¿A qué hora?</label>
@@ -51,7 +51,7 @@
       <p>  
         <label>¿Cuántas personas?</label>
       </p>
-      <input #numberDiners (click)="cleanNumberDiners()" class="w3-input border w3-round-large w3-animate-input" type="text" />
+      <input #numberDiners (change)="keepInputsValues('numberDiners', numberDiners.value)" class="w3-input border w3-round-large w3-animate-input" type="text" />
       <br />
       <p>  
         <label>¿Dónde prefieres?</label>
@@ -69,7 +69,7 @@
         <br />
         <label>(Una hora más específica, alergias, productos para celíacos,...)</label>
       </p>
-      <textarea #observations (click)="cleanObservations()" class="border" name="observations"></textarea> 
+      <textarea #observations (change)="keepInputsValues('observations', observations.value)" class="border" name="observations"></textarea> 
       <hr />
     </form>
 
@@ -94,7 +94,7 @@
   <div #modalError class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <div class="w3-container w3-center w3-red">
-        <span (click)="closeModalError()" class="w3-button w3-display-topright">&times;</span>
+        <span (click)="closeModal('error')" class="w3-button w3-display-topright">&times;</span>
         <h2>¡Ups! Ha ocurrido un error</h2>
       </div>
       <div class="w3-container">
@@ -116,7 +116,14 @@
           <p><strong>Hora: </strong>{{reserveHourError}}</p>
         </ng-template>
         <ng-template [ngIf]="numberDinersError != ''">
-          <p><strong>Comensales: </strong>{{numberDinersError}}</p>
+          <p>
+            <strong>Comensales: </strong>
+            {{numberDinersError}}
+            <br />
+            <span style="margin-left: 5px;"><i><strong>Teléfono:</strong></i>&nbsp;&nbsp;952 84 65 74</span>
+            <br />
+            <span style="margin-left: 5px;"><i><strong>Email:</strong></i>&nbsp;&nbsp;hacebuchemeson@gmail.com</span>
+          </p>
         </ng-template>
         <ng-template [ngIf]="preferedPlaceError != ''">
           <p><strong>Zona: </strong>{{preferedPlaceError}}</p>
@@ -130,7 +137,7 @@
   <div #modalCorrect class="w3-modal">
     <div class="w3-modal-content w3-animate-opacity w3-card-4">
       <div class="w3-container w3-center w3-green">
-        <span (click)="closeModalCorrect()" class="w3-button w3-display-topright">&times;</span>
+        <span (click)="closeModal('correct')" class="w3-button w3-display-topright">&times;</span>
         <h2>¡Solicitud enviada!</h2>
       </div>
       <div class="w3-container">
