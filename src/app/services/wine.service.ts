@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class WineService {
 
-  private apiWineUrl = 'http://localhost:3000/api/wines';
+  private apiWineUrl = 'https://hacebuche-api.herokuapp.com/api/wines';
 
   constructor(private http: HttpClient) { }
 

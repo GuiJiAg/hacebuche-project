@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class MailService {
 
-  private apiMailUrl = 'http://localhost:3000/api/mail';
+  private apiMailUrl = 'https://hacebuche-api.herokuapp.com/api/mail';
 
   constructor(private http: HttpClient) { }
 

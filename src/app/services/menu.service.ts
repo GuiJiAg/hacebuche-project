@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class MenuService {
   
-  private apiMenuUrl = 'http://localhost:3000/api/menu';
+  private apiMenuUrl = 'https://hacebuche-api.herokuapp.com/api/menu';
 
   constructor(private http: HttpClient) { }
 
