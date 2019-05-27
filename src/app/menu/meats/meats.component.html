@@ -3,7 +3,7 @@
     <h2 class="w3-center">Carnes</h2>
     <br />
     <div *ngFor="let meat of meats">
-      <ng-template [ngIf]="meat._id != '5cd439e5e8ea5935b0e33659'" [ngIfElse]="noPrice">
+      <ng-template [ngIf]="meat.price != 0" [ngIfElse]="noPrice">
         <h4>
           {{meat.name}}
           <br />
