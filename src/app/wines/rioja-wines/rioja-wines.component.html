@@ -16,9 +16,11 @@
             Precio Copa: <strong>{{riojaWine.cupPrice}} </strong><i class="fa fa-euro"></i>
           </p>
         </ng-template>
-        <p>
-          Precio Botella: <strong>{{riojaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
-        </p> 
+        <ng-template [ngIf]="riojaWine.bottlePrice > 0">
+          <p>
+            Precio Botella: <strong>{{riojaWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+          </p>
+        </ng-template> 
       </ng-template>
     </div>  
   </div>

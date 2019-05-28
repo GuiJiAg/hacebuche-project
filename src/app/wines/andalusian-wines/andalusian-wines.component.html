@@ -16,9 +16,11 @@
             Precio Copa: <strong>{{andalusianWine.cupPrice}} </strong><i class="fa fa-euro"></i>
           </p>
         </ng-template>
-        <p>
-          Precio Botella: <strong>{{andalusianWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
-        </p> 
+        <ng-template [ngIf]="andalusianWine.bottlePrice > 0">
+          <p>
+            Precio Botella: <strong>{{andalusianWine.bottlePrice}} </strong><i class="fa fa-euro"></i>
+          </p> 
+        </ng-template>
       </ng-template>
     </div>  
   </div>
