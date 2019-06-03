@@ -174,7 +174,7 @@ export class ReserveComponent implements OnInit {
 
     if (!pattern.test(this.mail.phone)) {
       this.phoneError = phoneErrorMessage;
-      
+      this.validatedFormData = false;
     }
   }
 
